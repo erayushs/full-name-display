@@ -7,6 +7,7 @@ function FullNameForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     setFullName(`${firstName} ${lastName}`);
   };
 
@@ -37,7 +38,7 @@ function FullNameForm() {
         <button type="submit">Submit</button>
       </form>
 
-      {fullName ? <p>Full Name: {fullName}</p> : <p> </p>}
+      {fullName && <p>Full Name: {fullName}</p>}
     </div>
   );
 }
